@@ -1,0 +1,53 @@
+<mat-toolbar class="header-toolbar" color="primary">
+  <mat-toolbar-row>
+    <div class="container">
+      <div class="row between-xs middle-xs header-row">
+        <nav>
+          <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
+          <a mat-button routerLink="/products" routerLinkActive="active"
+            >Products</a
+          >
+          <a mat-button routerLink="/contact" routerLinkActive="active"
+            >Contact</a
+          >
+        </nav>
+        <div class="">
+          <button
+            *ngIf="logged()"
+            mat-button
+            routerLink="/auth/login"
+            routerLinkActive="active"
+          >
+            Sign In
+          </button>
+          <button
+            *ngIf="logged()"
+            mat-button
+            routerLink="/auth/register"
+            routerLinkActive="active"
+          >
+            Sign Up
+          </button>
+          <button
+            *ngIf="notLogged()"
+            (click)="logout()"
+            mat-button
+            routerLinkActive="active"
+          >
+            Log Out
+          </button>
+          <a
+            *ngIf="notLogged()"
+            routerLink="/order"
+            mat-raised-button
+            [matBadge]="total$ | async"
+            matBadgeColor="warn"
+          >
+            <mat-icon>shopping_cart</mat-icon>
+            Cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

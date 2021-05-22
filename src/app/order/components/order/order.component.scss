@@ -1,0 +1,56 @@
+.image {
+  max-height: 50px;
+}
+
+.mat-table {
+  background-color: transparent !important;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+
+table tr:first-child td {
+    border-top: 0 solid;
+}
+
+.mat-row {
+    height: 50px;
+}
+
+th {
+    height: 50px;
+  width: 150px;
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+}
+
+table button {
+  margin: 1%;
+}
+
+a {
+  margin: 2%;
+}
+
+.highlight {
+  color: white;
+  background: #e2e1e6;
+}
+
+.content-table {
+  width: 96%;
+  margin: 2%;
+}
+
+.products-selected {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  grid-gap: 10px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
