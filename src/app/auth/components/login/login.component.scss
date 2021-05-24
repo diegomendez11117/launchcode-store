@@ -1,118 +1,174 @@
 body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    min-height: 100vh;
-    background: #e2e2e2;
-  }
-  
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  min-height: 100vh;
+  background: #e2e2e2;
+}
+
+::ng-deep .mat-card-header-text {
+  margin: 0 !important;
+}
+
+.mat-card-subtitle {
+  text-align: left;
+}
+
+mat-form-field.mat-form-field {
+  font-size: 16px;
+}
+
+mat-card {
+  max-width: 300px;
+  margin: 10em auto;
+  text-align: center;
+}
+
+mat-form-field {
+  display: block;
+}
+
+.app-header {
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
+.bottom{
+  display: flex;
+  padding-top: 20px;
+  width: 100%;
+}
+
+:host body{
+  background: url('../../../../assets/images/auth-background.jpg');
+  background-size: cover;
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn't move when 
+      the content's height is greater than the image's height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based
+      on the container's size */
+  background-size: cover;
+
+  /* Set a background color that will be displayed
+      while the background image is loading */
+  background-color: #464646;
+}
+
+form {
+  padding-bottom: 40px;
+}
 
 
-  mat-form-field.mat-form-field {
-    font-size: 16px;
-  }
-  
-  mat-card {
-      max-width: 400px;
-      margin: 10em auto;
-      text-align: center;    
-    }
-  
-    mat-form-field {
-      display: block;
-    }
-  
-  .app-header {
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
-  }
-  
-  .login-wrapper {
-    height: 100%;
-  }
-  
-  .positronx {
-    text-decoration: none;
-    color: #ffffff;
-  }
-  
-  .box {
-    position: relative;
-    top: 0;
-    opacity: 1;
-    
-    padding: 60px 50px 40px 50px;
-    width: 100%;
-    background: #fff;
-    border-radius: 10px;
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    z-index: 5;
-    max-width: 330px;
-  }
-  
-  .box.back {
-    transform: scale(.95);
-    -webkit-transform: scale(.95);
-    -ms-transform: scale(.95);
-    top: -20px;
-    opacity: .8;
-    z-index: -1;
-  }
-  
-  .box:before {
-    content: "";
-    width: 100%;
-    height: 30px;
-    border-radius: 10px;
-    position: absolute;
-    top: -10px;
-    background: rgba(255, 255, 255, .6);
-    left: 0;
-    transform: scale(.95);
-    -webkit-transform: scale(.95);
-    -ms-transform: scale(.95);
-    z-index: -1;
-  }
-  
-  .login-wrapper .example-form {
-    min-width: 100%;
-    max-width: 300px;
-    width: 100%;
-  }
-  
-  .login-wrapper .example-full-width,
-  .login-wrapper .btn-block {
-    width: 100%;
-  }
-  
-  .login-wrapper mat-card-header {
-    text-align: center;
-    width: 100%;
-    display: block;
-    font-weight: 700;
-  }
-  
-  .login-wrapper mat-card-header mat-card-title {
-    font-size: 40px;
-    margin: 0;
-  }
-  
-  .login-wrapper .mat-card {
-    padding: 40px 70px 50px;
-  }
-  
-  .login-wrapper .mat-stroked-button {
-    border: 1px solid currentColor;
-    line-height: 54px;
-    background: #FFF7FA;
-  }
-  
-  .login-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
-    padding: 0.8375em 0;
-  }
+
+a {
+  font-weight: 500;
+  padding-left: 5px;
+
+  float: right;
+
+  color: #317fe6;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+
+
+.positronx {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.box {
+  position: relative;
+  top: 0;
+  opacity: 1;
+
+  padding: 60px 50px 40px 50px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5;
+  max-width: 330px;
+}
+
+.box.back {
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  top: -20px;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+
+
+.login-wrapper .example-form {
+  min-width: 100%;
+  max-width: 300px;
+  width: 100%;
+}
+
+.login-wrapper mat-card-header {
+  padding-bottom: 30px;
+}
+
+.login-wrapper .example-full-width,
+.login-wrapper .btn-block {
+  width: 100%;
+}
+
+.login-wrapper mat-card-header {
+  width: 100%;
+  display: block;
+  font-weight: 400;
+}
+
+.login-wrapper mat-card-header mat-card-title {
+  padding-bottom: 30px;
+  font-size: 40px;
+  margin: 0;
+  text-align: left;
+}
+
+.login-wrapper .mat-card {
+  padding: 40px 70px 20px;
+}
+
+.login-wrapper .mat-stroked-button {
+  border: 1px solid currentColor;
+  line-height: 54px;
+  background: #fff7fa;
+}
+
+.login-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 0.8375em 0;
+}

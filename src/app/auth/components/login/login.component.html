@@ -1,15 +1,24 @@
 <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
   <mat-card class="box">
     <mat-card-header>
-      <mat-card-title>Sign in</mat-card-title>
+      <mat-card-title>Login</mat-card-title>
+      <mat-card-subtitle>Sign in to your account to continue.</mat-card-subtitle>
     </mat-card-header>
     <form [formGroup]="form" (ngSubmit)="login($event)" class="example-form">
       <mat-card-content>
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Email" formControlName="email" type="email"/>
-        </mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="name@example.com" formControlName="email" type="email"/>          
+          <button disabled mat-button matPrefix mat-icon-button>
+            <mat-icon>alternate_email</mat-icon>
+          </button>          
+        </mat-form-field>        
         <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
           <input matInput placeholder="Password" formControlName="password" [type]="hide ? 'password' : 'text'" />
+          <button disabled mat-button matPrefix mat-icon-button>
+            <mat-icon>vpn_key</mat-icon>
+          </button>
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>
@@ -17,7 +26,17 @@
       </mat-card-content>
       <button mat-raised-button color="primary" class="btn-block">
         Sign in
-      </button>
-    </form>
+      </button>      
+    </form>  
+    <mat-card-content>
+      <mat-divider></mat-divider>
+      <div class="bottom">
+        <mat-card-subtitle>
+          <a routerLink="/auth/register" >Create Account</a>
+          <a routerLink="/auth/register" >Forgot Password</a>
+        </mat-card-subtitle>
+      </div>
+    </mat-card-content> 
+     
   </mat-card>
 </div>
