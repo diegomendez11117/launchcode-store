@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "platzi-store": {
+    "acere-store": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/platzi-store",
+            "outputPath": "dist/acere-store",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -99,21 +99,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "platzi-store:build"
+            "browserTarget": "acere-store:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "platzi-store:build:production"
+              "browserTarget": "acere-store:build:production"
             },
             "stag": {
-              "browserTarget": "platzi-store:build:stag"
+              "browserTarget": "acere-store:build:stag"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "platzi-store:build"
+            "browserTarget": "acere-store:build"
           }
         },
         "test": {
@@ -152,11 +152,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "platzi-store:serve"
+            "devServerTarget": "acere-store:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "platzi-store:serve:production"
+              "devServerTarget": "acere-store:serve:production"
             }
           }
         },
@@ -167,5 +167,5 @@
       }
     }
   },
-  "defaultProject": "platzi-store"
+  "defaultProject": "acere-store"
 }

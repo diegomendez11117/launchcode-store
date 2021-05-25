@@ -1,14 +1,6 @@
 {
-  "targets": {
-    "platzi-store-501d9": {
-      "hosting": {
-        "platzi-store": [
-          "platzi-store-501d9"
-        ]
-      }
-    }
-  },
   "projects": {
-    "default": "platzi-store-501d9"
+    "acere-store": "acere-store",
+    "default": "acere-store"
   }
 }
